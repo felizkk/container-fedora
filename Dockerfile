@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/f35/s2i-base:latest
-LABEL Description="Baseline Fedora 35"
-RUN dnf update -y
-CMD echo "Fedora 35 base packages updated"
+FROM registry.redhat.io/ubi8/ubi-minimal:latest
+LABEL Description="Baseline RHEL 8 Minimal"
+RUN yum install iputils -y
+CMD echo "UBI Image installed with ping"
